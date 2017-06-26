@@ -1,0 +1,6 @@
+secretariatelsur@telsur.com -> telsursecre
+
+administrador@telsur.com -> admintelsur
+
+
+inscripcion@telsur.com -> personaltelsur
