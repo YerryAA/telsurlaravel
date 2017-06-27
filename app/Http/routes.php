@@ -44,16 +44,19 @@ Route::group(['prefix' => 'instituto', 'middleware' => ['auth', 'personalins']],
 
 
 
-Route::resource('instituto/inicio','InicioController');
-Route::resource('instituto/empleado','EmpleadoController');
-Route::resource('instituto/asistencia','AsistenciaController');
-Route::resource('instituto/estudiantes','EstudianteController');
-Route::resource('instituto/antecedentes','AntecedentesController');
-Route::resource('instituto/discapacidades','DiscapacidadController');
-Route::resource('instituto/tallas','TallasController');
-Route::resource('instituto/grupofamiliar','GrupoFamiliarController');
-Route::resource('instituto/transporte','TransporteController');
-Route::resource('instituto/representantes','RepresentantesController');
+Route::resource('instituto/inicio','InicioController'); //Vista Principal
+Route::resource('instituto/empleado','EmpleadoController'); //Vista a Secretaria
+Route::resource('instituto/asistencia','AsistenciaController'); //Vista a Secretaria
+
+Route::resource('instituto/estudiantes','EstudianteController'); //Vista a Estudiante
+Route::resource('instituto/direccion','DireccionController'); //Vista a Estudiante
+Route::resource('instituto/antecedentes','AntecedentesController'); //Vista a Estudiante
+Route::resource('instituto/discapacidades','DiscapacidadController'); //Vista a Estudiante
+Route::resource('instituto/tallas','TallasController'); //Vista a Estudiante
+Route::resource('instituto/grupofamiliar','GrupoFamiliarController'); //Vista a Estudiante
+Route::resource('instituto/transporte','TransporteController'); //Vista a Estudiante
+
+Route::resource('instituto/representantes','RepresentantesController'); //Vista a Representante
 Route::auth();
 
 Route::get('/home', 'HomeController@index');

@@ -78,7 +78,7 @@
 										<a href="{{ url('/instituto/antecedentes') }}"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Antecedentes del Estudiante</a>
 									</li>
 									<li>
-										<a href="{{ url('/instituto/estudiantes') }}"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Direccion del Estudiante</a>
+										<a href="{{ url('/instituto/direccion') }}"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Direccion del Estudiante</a>
 									</li>
 									<li>
 										<a href="{{ url('/instituto/discapacidades') }}"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Discapacidad del Estudiante</a>

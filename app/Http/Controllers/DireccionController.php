@@ -45,7 +45,7 @@ class DireccionController extends Controller
     	$direccion->iddatos_estudiantes=$request->get('iddatos_estudiantes');
     	$direccion->direccion=$request->get('direccion');
     	$direccion->pais_nacimiento=$request->get('pais_nacimiento');
-    	$direccion->estados=$request->get('estados');
+    	$direccion->estado=$request->get('estado');
     	$direccion->nacionalidad=$request->get('nacionalidad');
     	
 	$direccion->condicion='1';
@@ -73,7 +73,7 @@ class DireccionController extends Controller
 	$direccion->iddatos_estudiantes=$request->get('iddatos_estudiantes');
     	$direccion->direccion=$request->get('direccion');
     	$direccion->pais_nacimiento=$request->get('pais_nacimiento');
-    	$direccion->estados=$request->get('estados');
+    	$direccion->estado=$request->get('estado');
     	$direccion->nacionalidad=$request->get('nacionalidad');
     	
 	$direccion->update();
