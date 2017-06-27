@@ -78,6 +78,9 @@
 										<a href="{{ url('/instituto/antecedentes') }}"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Antecedentes del Estudiante</a>
 									</li>
 									<li>
+										<a href="{{ url('/instituto/estudiantes') }}"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Direccion del Estudiante</a>
+									</li>
+									<li>
 										<a href="{{ url('/instituto/discapacidades') }}"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Discapacidad del Estudiante</a>
 									</li>
 									<li>
@@ -99,6 +102,12 @@
 
 									<li>
 										<a href="{{ url('/instituto/representantes') }}"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Representantes</a>
+									</li>
+									<li>
+										<a href="{{ url('/instituto/telefono') }}"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Telefono del Representantes</a>
+									</li>
+									<li>
+										<a href="{{ url('/instituto/vivienda') }}"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Vivienda del Representantes</a>
 									</li>
 								</ul>
 							</li>
