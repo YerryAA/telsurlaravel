@@ -98,7 +98,7 @@
 								<ul class="list-unstyled full-box">
 
 									<li>
-										<a href=""><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Representantes</a>
+										<a href="{{ url('/instituto/representantes') }}"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Representantes</a>
 									</li>
 								</ul>
 							</li>

@@ -28,6 +28,12 @@
 					<li><a href="{{ url('/logout') }}"><i class="zmdi zmdi-power"></i></a></li>
 				</ul>
 			</div>
+				<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+					<li>
+						<a href="{{ url('/instituto/inicio') }}">
+							<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
+						</a>
+					</li>
 				<!-- SideBar Menu -->
 				<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 					<?php 
@@ -36,12 +42,6 @@
 
 
 				<!-- SideBar Menu -->
-				<ul class="list-unstyled full-box dashboard-sideBar-Menu">
-					<li>
-						<a href="{{ url('/instituto/inicio') }}">
-							<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
-						</a>
-					</li>
 
 					<li>
 						<a href="#!" class="btn-sideBar-SubMenu">
@@ -98,7 +98,7 @@
 								<ul class="list-unstyled full-box">
 
 									<li>
-										<a href=""><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Representantes</a>
+										<a href="{{ url('/instituto/representantes') }}"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Representantes</a>
 									</li>
 								</ul>
 							</li>

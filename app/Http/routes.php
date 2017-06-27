@@ -53,6 +53,7 @@ Route::resource('instituto/discapacidades','DiscapacidadController');
 Route::resource('instituto/tallas','TallasController');
 Route::resource('instituto/grupofamiliar','GrupoFamiliarController');
 Route::resource('instituto/transporte','TransporteController');
+Route::resource('instituto/representantes','RepresentantesController');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
