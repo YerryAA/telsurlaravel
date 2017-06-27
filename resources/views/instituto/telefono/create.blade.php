@@ -13,42 +13,37 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12 col-md-10 col-md-offset-1">
-					{!!Form::open(array('url'=>'instituto/direccion','method'=>'POST','autocomplete'=>'off')) !!}
+					{!!Form::open(array('url'=>'instituto/telefono','method'=>'POST','autocomplete'=>'off')) !!}
 					{{Form::token()}}
 					<div class="col-lg-6 col-sm-6">
 							<div class="form-group">
-								<label>Estudiante</label>
-									<select name="iddatos_estudiantes" class="form-control">
-										@foreach ($datos_estudiantes as $ti)
-											<option value="{{$ti->iddatos_estudiantes}}">{{$ti->nombres}}</option>
+								<label>Representante</label>
+									<select name="idrepresentantes" class="form-control">
+										@foreach ($representantes as $re)
+											<option value="{{$re->idrepresentantes}}">{{$re->representantes_nombre}}</option>
 										@endforeach
 									</select>
 							</div>
 						</div>
 					<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
-					<label for="direccion">Direccion</label>
-					<input type="text" name="direccion" class="form-control" value="{{old('direccion')}}">
+					<label for="telefono_uno">Telefono 1</label>
+					<input type="text" name="telefono_uno" class="form-control" value="{{old('telefono_uno')}}">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
-					<label for="pais_nacimiento">Pais de Nacimiento</label>
-					<input type="text" name="pais_nacimiento" class="form-control" value="{{old('pais_nacimiento')}}">
+					<label for="telefono_dos">Telefono 2</label>
+					<input type="text" name="telefono_dos" class="form-control" value="{{old('telefono_dos')}}">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
-					<label for="estado">Estado</label>
-					<input type="text" name="estado" class="form-control" value="{{old('estado')}}">
+					<label for="telefono_local">Telefono Local</label>
+					<input type="text" name="telefono_local" class="form-control" value="{{old('telefono_local')}}">
 				</div>
 			</div>
-			<div class="col-lg-6 col-sm-6">
-				<div class="form-group">
-					<label for="nacionalidad">Nacionalidad</label>
-					<input type="text" name="nacionalidad" class="form-control" value="{{old('nacionalidad')}}">
-				</div>
-			</div>
+			
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<button class="btn btn-primary" type="submit">Guardar</button>

@@ -57,6 +57,7 @@ Route::resource('instituto/grupofamiliar','GrupoFamiliarController'); //Vista a 
 Route::resource('instituto/transporte','TransporteController'); //Vista a Estudiante
 
 Route::resource('instituto/representantes','RepresentantesController'); //Vista a Representante
+Route::resource('instituto/telefono','TelefonoController'); //Vista a Representante
 Route::auth();
 
 Route::get('/home', 'HomeController@index');

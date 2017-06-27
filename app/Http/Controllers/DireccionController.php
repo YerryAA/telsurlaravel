@@ -40,7 +40,7 @@ class DireccionController extends Controller
 
     public function store(FormRequestDireccion $request)
     {
-    	$discapacidad= new Direccion; //Modelo
+    	$direccion= new Direccion; //Modelo
 
     	$direccion->iddatos_estudiantes=$request->get('iddatos_estudiantes');
     	$direccion->direccion=$request->get('direccion');
