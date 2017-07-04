@@ -28,25 +28,25 @@
 					<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="transporte_nombre">Transporte Nombre</label>
-					<input type="text" name="transporte_nombre" class="form-control" value="{{old('transporte_nombre')}}">
+					<input type="text" name="transporte_nombre" class="form-control" value="{{old('transporte_nombre')}}" pattern="[A-Z a-z]{1,100}" maxlength="100">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="transporte_cedula">Transporte Cedula</label>
-					<input type="text" name="transporte_cedula" class="form-control" value="{{old('transporte_cedula')}}">
+					<input type="text" name="transporte_cedula" class="form-control" value="{{old('transporte_cedula')}}" pattern="[0-9]{1,11}">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="transporte_telefono">Transporte Telefono</label>
-					<input type="text" name="transporte_telefono" class="form-control" value="{{old('transporte_telefono')}}">
+					<input type="text" name="transporte_telefono" class="form-control" value="{{old('transporte_telefono')}}" pattern="[0-9]{1,11}">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="transporte_vehiculo">Transporte Vehiculo</label>
-					<input type="text" name="transporte_vehiculo" class="form-control" value="{{old('transporte_vehiculo')}}">
+					<input type="text" name="transporte_vehiculo" class="form-control" value="{{old('transporte_vehiculo')}}" pattern="[A-Z a-z]{1,100}" maxlength="100">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">

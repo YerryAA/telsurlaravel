@@ -17,7 +17,7 @@
 										<th><b>Representantes</b></th>
 										<th><b>Telefono 1</b></th>
 										<th><b>Telefono 2</b></th>
-										<th><b>Telefono  3</b></th>
+										<th><b>Telefono Local</b></th>
 										<th><b>Actualizar</b></th>
 									</tr>
 								</thead>

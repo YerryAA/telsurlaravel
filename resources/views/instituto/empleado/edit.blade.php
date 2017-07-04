@@ -16,27 +16,58 @@
 			{{Form::token()}}
 			<div class="form-group">
 				<label for="empleado_nombre">Nombres</label>
-				<input type="text" name="empleado_nombre" class="form-control" value="{{$empleado->empleado_nombre}}">
+				<input type="text" name="empleado_nombre" class="form-control" value="{{$empleado->empleado_nombre}}" pattern="[A-Z a-z]{1,100}" maxlength="100">
 			</div>
 			<div class="form-group">
 				<label for="empleado_apellido">Apellidos</label>
-				<input type="text" name="empleado_apellido" class="form-control" value="{{$empleado->empleado_apellido}}">
+				<input type="text" name="empleado_apellido" class="form-control" value="{{$empleado->empleado_apellido}}" pattern="[A-Z a-z]{1,100}" maxlength="100">
 			</div>
 			<div class="form-group">
 				<label for="empleado_cedula">Cedula</label>
-				<input type="text" name="empleado_cedula" class="form-control" value="{{$empleado->empleado_cedula}}">
+				<input type="text" name="empleado_cedula" class="form-control" value="{{$empleado->empleado_cedula}}" pattern="[0-9]{1,9}">
 			</div>
 			<div class="form-group">
 				<label for="empleado_horario">Horario</label>
-				<input type="text" name="empleado_horario" class="form-control" value="{{$empleado->empleado_horario}}">
+				<select name="empleado_horario" class="form-control">
+					@if($empleado->empleado_horario=='6:00am - 12:00pm')
+					<option value="6:00am - 12:00pm" name="6:00am - 12:00pm" selected>6:00am - 12:00pm</option>
+					<option value="7:00am - 12:00pm" name="7:00am - 12:00pm">7:00am - 12:00pm</option>
+					@else
+					<option value="6:00am - 12:00pm" name="6:00am - 12:00pm">6:00am - 12:00pm</option>
+					<option value="7:00am - 12:00pm" name="7:00am - 12:00pm" selected>7:00am - 12:00pm</option>
+					@endif
+				</select>
+						
 			</div>
 			<div class="form-group">
 				<label for="empleado_estatus">Estatus</label>
-				<input type="text" name="empleado_estatus" class="form-control" value="{{$empleado->empleado_estatus}}">
+					<select name="empleado_estatus" class="form-control">
+						@if($empleado->empleado_estatus=='Activo')
+						<option value="Activo" name="Activo" selected>Activo</option>
+						<option value="Inactivo" name="Inactivo">Inactivo</option>
+						@else
+						<option value="Activo" name="Activo">Activo</option>
+						<option value="Inactivo" name="Inactivo" selected>Inactivo</option>
+						@endif
+					</select>
 			</div>
 			<div class="form-group">
 				<label for="empleado_cargo">Cargo</label>
-				<input type="text" name="empleado_cargo" class="form-control" value="{{$empleado->empleado_cargo}}">
+				<select name="empleado_cargo" class="form-control">
+					@if($empleado->empleado_cargo=='Administrativo')
+					<option value="Administrativo" name="Administrativo" selected>Administrativo</option>
+					<option value="Docente" name="Docente">Docente</option>
+					<option value="Obrero" name="Obrero">Obrero</option>
+					@elseif($empleado->empleado_cargo=='Docente')
+					<option value="Administrativo" name="Administrativo">Administrativo</option>
+					<option value="Docente" name="Docente" selected>Docente</option>
+					<option value="Obrero" name="Obrero">Obrero</option>
+					@else
+					<option value="Administrativo" name="Administrativo">Administrativo</option>
+					<option value="Docente" name="Docente">Docente</option>
+					<option value="Obrero" name="Obrero" selected>Obrero</option>
+					@endif
+				</select>
 			</div>
 			<div class="form-group">
 				<button class="btn btn-primary" type="submit">Guardar</button>

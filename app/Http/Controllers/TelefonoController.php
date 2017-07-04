@@ -69,7 +69,6 @@ class TelefonoController extends Controller
     {
     	$telefono=Telefono::findOrFail($id);
 
-	$telefono->idrepresentantes=$request->get('idrepresentantes');
     	$telefono->telefono_uno=$request->get('telefono_uno');
     	$telefono->telefono_dos=$request->get('telefono_dos');
     	$telefono->telefono_local=$request->get('telefono_local');

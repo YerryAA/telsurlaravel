@@ -32,25 +32,33 @@
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="nombres">Nombres</label>
-					<input type="text" name="nombres" class="form-control" value="{{$datos_estudiantes->nombres}}">
+					<input type="text" name="nombres" class="form-control" value="{{$datos_estudiantes->nombres}}" pattern="[A-Z a-z]{1,100}" maxlength="100">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="apellidos">Apellido</label>
-					<input type="text" name="apellidos" class="form-control" value="{{$datos_estudiantes->apellidos}}">
+					<input type="text" name="apellidos" class="form-control" value="{{$datos_estudiantes->apellidos}}" pattern="[A-Z a-z]{1,100}" maxlength="100">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="cedula">Cedula</label>
-					<input type="text" name="cedula" class="form-control" value="{{$datos_estudiantes->cedula}}">
+					<input type="text" name="cedula" class="form-control" value="{{$datos_estudiantes->cedula}}" pattern="[1-9]{1,11}" maxlength="11">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="genero">Genero</label>
-					<input type="text" name="genero" class="form-control" value="{{$datos_estudiantes->genero}}">
+					<select name="genero" class="form-control">
+					@if($datos_estudiantes->genero=='F')
+					<option name="F" value="F" selected>F</option>
+					<option name="M" value="M">M</option>
+					@else
+					<option name="F" value="F">F</option>
+					<option name="M" value="M" selected>M</option>
+					@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
@@ -74,13 +82,30 @@
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="carnet">Carnet</label>
-					<input type="text" name="carnet" class="form-control" value="{{$datos_estudiantes->carnet}}">
+					<select name="carnet" class="form-control" required>
+						@if($datos_estudiantes->carnet=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="becado">Becado</label>
-					<input type="text" name="becado" class="form-control" value="{{$datos_estudiantes->becado}}">
+					<select name="becado" class="form-control" required>
+						@if($datos_estudiantes->becado=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
+					
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
@@ -92,13 +117,29 @@
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="posee_canaima">Posee Canaima</label>
-					<input type="text" name="posee_canaima" class="form-control" value="{{$datos_estudiantes->posee_canaima}}">
+					<select name="posee_canaima" class="form-control" required>
+						@if($datos_estudiantes->posee_canaima=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="lateralidad">Lateralidad</label>
-					<input type="text" name="lateralidad" class="form-control" value="{{$datos_estudiantes->lateralidad}}">
+					<select name="lateralidad" class="form-control" required>
+						@if($datos_estudiantes->lateralidad=='Derecho')
+						<option value="Derecho" name="Derecho" selected>Derecho</option>
+						<option value="Izquierdo" name="Izquierdo">Izquierdo</option>
+						@else
+						<option value="Derecho" name="Derecho">Derecho</option>
+						<option value="Izquierdo" name="Izquierdo" selected>Izquierdo</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
@@ -110,19 +151,43 @@
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="esterilizado">Esterilizado</label>
-					<input type="text" name="esterilizado" class="form-control" value="{{$datos_estudiantes->esterilizado}}">
+					<select name="esterilizado" class="form-control" required>
+						@if($datos_estudiantes->esterilizado=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="hijos">Hijos</label>
-					<input type="text" name="hijos" class="form-control" value="{{$datos_estudiantes->hijos}}">
+					<select name="hijos" class="form-control" required>
+						@if($datos_estudiantes->hijos=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="dieta">Dieta</label>
-					<input type="text" name="dieta" class="form-control" value="{{$datos_estudiantes->dieta}}">
+					<select name="dieta" class="form-control" required>
+						@if($datos_estudiantes->dieta=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">

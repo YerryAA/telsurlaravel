@@ -50,6 +50,7 @@ class AsistenciaController extends Controller
     	$asistencia->retardo=$request->get('retardo');
 	$asistencia->permiso_personal=$request->get('permiso_personal');
 	$asistencia->permiso_justificado=$request->get('permiso_justificado');
+             $asistencia->condicion='1';
     	$asistencia->save();
 
 	return Redirect::to('instituto/asistencia');
@@ -88,7 +89,7 @@ class AsistenciaController extends Controller
     public function destroy($id)
     {
     	$asistencia=Asistencia::FindOrFail($id);
-    	$asistencia->condicion='Inactivo';
+    	$asistencia->condicion='0';
     	$asistencia->update();
     	return Redirect::to('instituto/asistencia');
     }

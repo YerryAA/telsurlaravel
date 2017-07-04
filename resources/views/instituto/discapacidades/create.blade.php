@@ -28,25 +28,37 @@
 					<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="discapacidad_nombre">Nombre de la Discapacidad</label>
-					<input type="text" name="discapacidad_nombre" class="form-control" value="{{old('discapacidad_nombre')}}">
+					<input type="text" name="discapacidad_nombre" class="form-control" value="{{old('discapacidad_nombre')}}" pattern="[A-Z a-z]{1,100}" maxlength="100" required>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="convulsiona">Convulsiona</label>
-					<input type="text" name="convulsiona" class="form-control" value="{{old('convulsiona')}}">
+					<select name="convulsiona" class="form-control">
+						<option>Selecione</option>
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No">No</option>
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="alergico">Alergico</label>
-					<input type="text" name="alergico" class="form-control" value="{{old('alergico')}}">
+					<select name="alergico" class="form-control">
+						<option>Selecione</option>
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No">No</option>
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="toma_medicamento">Toma Medicamento</label>
-					<input type="text" name="toma_medicamento" class="form-control" value="{{old('toma_medicamento')}}">
+					<select name="toma_medicamento" class="form-control">
+						<option>Selecione</option>
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No">No</option>
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">

@@ -28,25 +28,25 @@
 					<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="direccion">Direccion</label>
-					<input type="text" name="direccion" class="form-control" value="{{old('direccion')}}">
+					<input type="text" name="direccion" class="form-control" value="{{old('direccion')}}" pattern="[A-Z a-z]{1,100}" maxlength="100" required>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="pais_nacimiento">Pais de Nacimiento</label>
-					<input type="text" name="pais_nacimiento" class="form-control" value="{{old('pais_nacimiento')}}">
+					<input type="text" name="pais_nacimiento" class="form-control" value="{{old('pais_nacimiento')}}" pattern="[A-Z a-z]{1,100}" maxlength="100" required>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="estado">Estado</label>
-					<input type="text" name="estado" class="form-control" value="{{old('estado')}}">
+					<input type="text" name="estado" class="form-control" value="{{old('estado')}}" pattern="[A-Z a-z]{1,100}" maxlength="100" required>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<label for="nacionalidad">Nacionalidad</label>
-					<input type="text" name="nacionalidad" class="form-control" value="{{old('nacionalidad')}}">
+					<input type="text" name="nacionalidad" class="form-control" value="{{old('nacionalidad')}}" pattern="[A-Z a-z]{1,100}" maxlength="100" required>
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">

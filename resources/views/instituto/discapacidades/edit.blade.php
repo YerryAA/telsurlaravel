@@ -30,25 +30,49 @@
 			<div class="col-lg-12 col-sm-6">
 				<div class="form-group">
 					<label for="discapacidad_nombre">Nombre de Discapacidad</label>
-					<input type="text" name="discapacidad_nombre" class="form-control" value="{{$discapacidad->discapacidad_nombre}}">
+					<input type="text" name="discapacidad_nombre" class="form-control" value="{{$discapacidad->discapacidad_nombre}}" pattern="[A-Z a-z]{1,100}" maxlength="100">
 				</div>
 			</div>
 			<div class="col-lg-12 col-sm-6">
 				<div class="form-group">
 					<label for="convulsiona">Convulsiona</label>
-					<input type="text" name="convulsiona" class="form-control" value="{{$discapacidad->convulsiona}}">
+					<select name="convulsiona" class="form-control" required>
+						@if($discapacidad->convulsiona=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-12 col-sm-6">
 				<div class="form-group">
 					<label for="alergico">Alergico</label>
-					<input type="text" name="alergico" class="form-control" value="{{$discapacidad->alergico}}">
+					<select name="alergico" class="form-control" required>
+						@if($discapacidad->alergico=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			<div class="col-lg-12 col-sm-6">
 				<div class="form-group">
 					<label for="toma_medicamento">Toma Medicamento</label>
-					<input type="text" name="toma_medicamento" class="form-control" value="{{$discapacidad->toma_medicamento}}">
+					<select name="toma_medicamento" class="form-control" required>
+						@if($discapacidad->toma_medicamento=='Si')
+						<option value="Si" name="Si" selected>Si</option>
+						<option value="No" name="No">No</option>
+						@else
+						<option value="Si" name="Si">Si</option>
+						<option value="No" name="No" selected>No</option>
+						@endif
+					</select>
 				</div>
 			</div>
 			

@@ -139,7 +139,9 @@
 					Personal
 				</div>
 				<div class="full-box tile-icon text-center">
-					<i class="zmdi zmdi-male-alt"></i>
+					<i class="zmdi zmdi-male-alt">
+						
+					</i>
 				</div>
 			</article>
 			<article class="full-box tile">

@@ -13,7 +13,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12 col-md-10 col-md-offset-1">
-					{!!Form::open(array('url'=>'instituto/discapacidades','method'=>'POST','autocomplete'=>'off')) !!}
+					{!!Form::open(array('url'=>'instituto/tallas','method'=>'POST','autocomplete'=>'off')) !!}
 					{{Form::token()}}
 					<div class="col-lg-6 col-sm-6">
 							<div class="form-group">
@@ -27,28 +27,23 @@
 						</div>
 					<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
-					<label for="discapacidad_nombre">Nombre de la Discapacidad</label>
-					<input type="text" name="discapacidad_nombre" class="form-control" value="{{old('discapacidad_nombre')}}">
+					<label for="talla_pantalon">Talla de Pantalon</label>
+					<input type="text" name="talla_pantalon" class="form-control" value="{{old('talla_pantalon')}}">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
-					<label for="convulsiona">Convulsiona</label>
-					<input type="text" name="convulsiona" class="form-control" value="{{old('convulsiona')}}">
+					<label for="talla_camisa">Talla de Camisa</label>
+					<input type="text" name="talla_camisa" class="form-control" value="{{old('talla_camisa')}}">
 				</div>
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
-					<label for="alergico">Alergico</label>
-					<input type="text" name="alergico" class="form-control" value="{{old('alergico')}}">
+					<label for="talla_zapato">Talla de Zapato</label>
+					<input type="text" name="talla_zapato" class="form-control" value="{{old('talla_zapato')}}">
 				</div>
 			</div>
-			<div class="col-lg-6 col-sm-6">
-				<div class="form-group">
-					<label for="toma_medicamento">Toma Medicamento</label>
-					<input type="text" name="toma_medicamento" class="form-control" value="{{old('toma_medicamento')}}">
-				</div>
-			</div>
+			
 			<div class="col-lg-6 col-sm-6">
 				<div class="form-group">
 					<button class="btn btn-primary" type="submit">Guardar</button>

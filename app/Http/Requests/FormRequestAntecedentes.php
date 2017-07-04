@@ -30,7 +30,7 @@ class FormRequestAntecedentes extends Request
             'desarrollo_psicomotor'=>'required|max:100',
             'desarrollo_lenguaje'=>'required|max:100',
             'primeras_palabras'=>'required|max:100',
-            'edad_primeraspalabras'=>'required|max:2',
+            'edad_primeraspalabras'=>'required|max:100',
             'antecedentes_saludge'=>'required|max:100',
             'antecedentes_saluds'=>'required|max:100',
             'personalidad'=>'required|max:100',

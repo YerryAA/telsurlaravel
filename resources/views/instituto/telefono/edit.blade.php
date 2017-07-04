@@ -2,7 +2,7 @@
 @section ('contenido')
 	<div class="row">
 		<div class="col-lg-6 col-md-12 col-sm-6">
-			<h3>Editar Representante</h3>
+			<h3>Editar Representante:</h3>
 			@if (count($errors)>0)
 			<div class="alert alert-danger">
 				<ul>
@@ -15,34 +15,23 @@
 			{!!Form::model($telefono,['method'=>'PATCH','route'=>['instituto.telefono.update',$telefono->idtelefono]])!!}
 			{{Form::token()}}
 
-			<div class="col-lg-12 col-sm-6">
-				<div class="form-group">
-					<label>Representante</label>
-						<select name="idrepresentantes" class="form-control">
-							@foreach ($representantes as $es)
-								@if ($es->idrepresentantes==$telefono->idtelefono)
-									<option value="{{$es->idrepresentantes}}" selected>{{$es->representantes_nombre}}</option>
-								@endif
-							@endforeach
-						</select>
-				</div>
-			</div>
+			
 			<div class="col-lg-12 col-sm-6">
 				<div class="form-group">
 					<label for="telefono_uno">Telefono Uno</label>
-					<input type="text" name="telefono_uno" class="form-control" value="{{$telefono->telefono_uno}}">
+					<input type="text" name="telefono_uno" class="form-control" value="{{$telefono->telefono_uno}}" pattern="[0-9]{1,11}">
 				</div>
 			</div>
 			<div class="col-lg-12 col-sm-6">
 				<div class="form-group">
 					<label for="telefono_dos">Telefono Dos</label>
-					<input type="text" name="telefono_dos" class="form-control" value="{{$telefono->telefono_dos}}">
+					<input type="text" name="telefono_dos" class="form-control" value="{{$telefono->telefono_dos}}" pattern="[0-9]{1,11}">
 				</div>
 			</div>
 			<div class="col-lg-12 col-sm-6">
 				<div class="form-group">
 					<label for="telefono_local">Telefono Local</label>
-					<input type="text" name="telefono_local" class="form-control" value="{{$telefono->telefono_local}}">
+					<input type="text" name="telefono_local" class="form-control" value="{{$telefono->telefono_local}}" pattern="[0-9]{1,11}">
 				</div>
 			</div>
 			

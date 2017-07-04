@@ -24,7 +24,6 @@ class FormRequestTelefono extends Request
     public function rules()
     {
         return [
-            'idrepresentantes'=>'required',
             'telefono_uno'=>'required|max:11',
             'telefono_dos'=>'max:11',
             'telefono_local'=>'required|max:11'

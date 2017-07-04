@@ -55,8 +55,7 @@ class EstudianteController extends Controller
     	$datos_estudiantes->cedula=$request->get('cedula');
     	$datos_estudiantes->genero=$request->get('genero');
     	$datos_estudiantes->edad=$request->get('edad');
-    	$mytime=Carbon::now('America/Caracas');
-	$datos_estudiantes->fecha_nacimiento=$mytime->toDateTimeString();
+	$datos_estudiantes->fecha_nacimiento=$request->get('fecha_nacimiento');
 	$datos_estudiantes->edad=$request->get('edad');
 	$datos_estudiantes->anos_calificacion=$request->get('anos_calificacion');
 	$datos_estudiantes->carnet=$request->get('carnet');
@@ -68,7 +67,7 @@ class EstudianteController extends Controller
 	$datos_estudiantes->esterilizado=$request->get('esterilizado');
 	$datos_estudiantes->hijos=$request->get('hijos');
 	$datos_estudiantes->dieta=$request->get('dieta');
-          $datos_estudiantes->condicion='1';
+             $datos_estudiantes->condicion='1';
     	$datos_estudiantes->save();
 
 	return Redirect::to('instituto/estudiantes');
@@ -96,8 +95,7 @@ class EstudianteController extends Controller
     	$datos_estudiantes->cedula=$request->get('cedula');
     	$datos_estudiantes->genero=$request->get('genero');
     	$datos_estudiantes->edad=$request->get('edad');
-    	$mytime=Carbon::now('America/Caracas');
-	$datos_estudiantes->fecha_nacimiento=$mytime->toDateTimeString();
+    	$datos_estudiantes->fecha_nacimiento=$request->get('fecha_nacimiento');
 	$datos_estudiantes->edad=$request->get('edad');
 	$datos_estudiantes->anos_calificacion=$request->get('anos_calificacion');
 	$datos_estudiantes->carnet=$request->get('carnet');

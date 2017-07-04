@@ -10,37 +10,50 @@
 					<div class="col-lg-6 col-sm-6">
 						<div class="form-group">
 								<label for="empleado_nombre">Nombres</label>
-								<input type="text" name="empleado_nombre" required value="{{old('empleado_nombre')}}" class="form-control" placeholder="Nombres...">
+								<input type="text" name="empleado_nombre" required value="{{old('empleado_nombre')}}" class="form-control" placeholder="Nombres..." pattern="[A-Z a-z]{1,100}" maxlength="100">
 						</div>
 					</div>
 					<div class="col-lg-6 col-sm-6">
 						<div class="form-group">
 							<label for="empleado_apellidos">Apellidos</label>
-								<input type="text" name="empleado_apellido" required value="{{old('empleado_apellido')}}" class="form-control" placeholder="Apellido...">
+								<input type="text" name="empleado_apellido" required value="{{old('empleado_apellido')}}" class="form-control" placeholder="Apellido..." pattern="[A-Z a-z]{1,100}" maxlength="100">
 						</div>
 					</div>
 					<div class="col-lg-6 col-sm-6">
 						<div class="form-group">
 							<label for="empleado_cedula">Cedula</label>
-								<input type="text" name="empleado_cedula" required value="{{old('empleado_cedula')}}" class="form-control" placeholder="Cedula...">
+								<input type="text" name="empleado_cedula" required value="{{old('empleado_cedula')}}" class="form-control" placeholder="Cedula..." pattern="[1-9]{1,9}">
 						</div>	
 					</div>
 					<div class="col-lg-6 col-sm-6">
 						<div class="form-group">
 							<label for="empleado_horario">Horario</label>
-								<input type="text" name="empleado_horario" required value="{{old('empleado_horario')}}" class="form-control" placeholder="Horario...">
+								<select name="empleado_horario" class="form-control">
+									<option value="Seleccione">Seleccione</option>
+									<option value="6:00am - 12:00pm" name="6:00am - 12:00pm">6:00am - 12:00pm</option>
+									<option value="7:00am - 12:00pm" name="7:00am - 12:00pm">7:00am - 12:00pm</option>
+								</select>
 						</div>	
 					</div>
 					<div class="col-lg-6 col-sm-6">
 						<div class="form-group">
 							<label for="empleado_estatus">Estatus</label>
-								<input type="text" name="empleado_estatus" required value="{{old('empleado_estatus')}}" class="form-control" placeholder="Estatus...">
+								<select name="empleado_estatus" class="form-control">
+									<option value="Seleccione">Seleccione</option>
+									<option value="Activo" name="Activo">Activo</option>
+									<option value="Inactivo" name="Inactivo">Inactivo</option>				
+								</select>
 						</div>	
 					</div>
 					<div class="col-lg-6 col-sm-6">
 						<div class="form-group">
 							<label for="empleado_cargo">Cargo</label>
-								<input type="text" name="empleado_cargo" required value="{{old('empleado_cargo')}}" class="form-control" placeholder="Cargo...">
+							<select name="empleado_cargo" class="form-control">
+								<option value="Seleccione" name="">Seleccione</option>
+								<option name="Administrativo" value="Administrativo">Administrativo</option>
+								<option name="Docente" value="Docente">Docente</option>
+								<option name="Obrero" value="Obrero">Obrero</option>
+							</select>
 						</div>	
 					</div>
 					<div class="col-lg-6 col-sm-6">
